@@ -1,0 +1,6 @@
+com\watersupply\alertservice\controller\AlertController.class
+com\watersupply\alertservice\service\EmailService.class
+com\watersupply\alertservice\controller\AlertWebController.class
+com\watersupply\alertservice\AlertServiceApplication.class
+com\watersupply\alertservice\service\AlertClient.class
+com\watersupply\alertservice\config\EmailConfig.class
