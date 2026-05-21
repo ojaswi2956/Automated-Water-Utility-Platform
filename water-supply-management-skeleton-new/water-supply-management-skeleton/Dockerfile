@@ -3,8 +3,7 @@ WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
 
-FROM eclipse-temurin:17-jdk
-WORKDIR /app
-COPY --from=build /app/target/water-supply-management.jar app.jar
+FROM tomcat:9.0-jdk17-temurin
+COPY --from=build /app/target/water-supply-management.war /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
-CMD ["java", "-jar", "app.jar"]
+CMD ["catalina.sh", "run"]
